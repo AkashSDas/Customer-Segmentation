@@ -1,150 +1,64 @@
+# customer-segmentation
 
+Knowing your customers is very essential in business because once you know your customers you can create schemes and products as per their needs and your profit interest.
 
-# Customer Segmentation
-
-  
-
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-
-[![](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/AkashSDas)
-
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/AkashSDas)
-
-[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](LICENSE)
-
-  
-  
+Here [Customer Segmentation](https://www.kaggle.com/nafemuhtasim/customer-segmentation) dataset by [Nafe Muhtasim](https://www.kaggle.com/nafemuhtasim) to `cluster` customers in different `segments`. This is `unsupervised` learning problem.
 
 ## Table of contents
 
-  
+- [Getting started](#getting-started)
+- [Findings](#findings)
+- [Clusters](#clusters)
+- [License](#license)
 
-*  [About](#about)
+## Getting started
 
-* [Technologies Used](#technologies-used)
+The [notebook](https://www.kaggle.com/akashsdas/predict-students-grades) is available on Kaggle to work in the same environment where this notebook was created i.e. use the same version packages used, etc...
 
-* [Results of the Project](#results-of-the-project)
+## Findings
 
-*  [Installation](#installation)
+**Customer age distribution**
 
-*  [License](#license)
+![](./docs/imgs/customer-age-range.png)
 
-  
-  
+![](./docs/imgs/corr.png)
 
-## About
+> Though the plot might show that there is strong relation between `Age` & `Years Employeed` but that is just because Years Employeed data is very much spreaded. Their `pearson` correlation is 0.55 indicating they have moderate corr
+>
+> `Age` and `Income` have moderate correlation
+>
+> `Edu` is have a very low correlation with other columns in the dataset.
+>
+> `Years Employed` has a moderate correlation between `Age`, `Income` & `Other Debt`
+>
+> `Other Debt` & `Card Debt` also have moderate correlation with `Income` & `DebtIncomeRation` (as the name suggest that its Debt and Income's ration. Also `Other Debt` & `Card Debt` have a moderate correlation with themselves
+>
+> `Defauled` has low but only worth while correlation with `DebtIncomeRation`|
 
-> Knowing your customers is very essential in business because once you know your customers you can create schemes and products as per their needs and your profit interest.
+**Debt vs EDU**
 
-> Using `Data Science` and `Machine Learning` we can separate our customers into number of groups we want.
+![](./docs/imgs/debt-vs-edu.png)
 
-> Here it is an `Unsupervised Learning` problem and moreover it is an `Clustering` problem.
+**Debt vs Income**
 
-## Technologies Used
-  
-> [![](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/) is used as Programming Language.
+![](./docs/imgs/debt-vs-income.png)
 
->  `Numpy` and `Pandas` are used to work with the data.
+To know more read the [notebook](./notebook.ipynb).
 
-> `Matplotlib` and `mpl_toolkits` is used to visualise the results.
+## Clusters
 
-> `Sciki-learn` is used for data preprocessing, creating machine learning model and evaluating it, thus creating a pipeline.
+**9 clusters**
 
-> `Pipenv` is the virtual environment used for the project. `Jupyter Notebook` is used to for the entire data science and machine learning life cycle.
+![](./docs/imgs/segmentation4.png)
+![](./docs/imgs/segmentation5.png)
+![](./docs/imgs/segmentation6.png)
 
-## Results of the Project
+**3 clusters**
 
-#### Cluster Segmentation: Income VS Age
-
-![Cluster Segmentation: Income VS Age](https://github.com/AkashSDas/Customer-Segmentation/blob/master/project-results-images/img1.png)
-
-#### Cluster Segmentation: Income VS Age VS Education
-
-![Cluster Segmentation: Income VS Age VS Education](https://github.com/AkashSDas/Customer-Segmentation/blob/master/project-results-images/img2.png)
-
-## Installation
-
-  
-
-It is highly **recommended** to use **`virtual environment`** for this project to avoid any issues related to dependencies.
-
-  
-
-Here **`pipenv`** is used for this project.
-
-  
-
-There is a **`requirements.txt`** file in `'Customer-Segmentation'/requirements.txt` which has all the dependencies for this project.
-
-  
-
-- First, start by closing the repository
-
-  
-
-```bash
-git clone https://github.com/AkashSDas/Customer-Segmentation
-```
-
-  
-
-- Start by installing **`pipenv`** if you don't have it
-
-```bash
-pip install pipenv
-```
-
-  
-
-- Once installed, access the venv folder inside the project folder
-
-```bash
-cd  'Customer-Segmentation'/venv/
-```
-
-  
-
-- Create the virtual environment
-
-```bash
-pipenv install
-```
-
-The **Pipfile** of the project must be for creating replicating project's virtual environment.
-
-  
-
-This will install all the dependencies and create a **Pipfile.lock** (this should not be altered).
-
-  
-
-- Enable the virtual environment
-
-```bash
-pipenv shell
-```
-- dataset, jupyter notebook and model are in `'Customer-Segmentation'/venv/src` folder.
-```bash
-cd src/
-```
-
-  
-
-- To start/view the jupyter notebook
-
-```bash
-jupyter noterbook
-```
-
-  
-
-This will open a webpage in the browser from there you can click on notebook.ipynb to view it.
-  
+![](./docs/imgs/segmentation3.png)
+![](./docs/imgs/segmentation2.png)
+![](./docs/imgs/segmentation1.png)
 
 ## License
 
-  
-
-This project is licensed under the MIT License - see the [MIT LICENSE](LICENSE) file for details.
+[APACHE LICENSE, VERSION 2.0](./LICENSE)
