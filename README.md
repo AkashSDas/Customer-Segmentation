@@ -13,7 +13,7 @@ Here [Customer Segmentation](https://www.kaggle.com/nafemuhtasim/customer-segmen
 
 ## Getting started
 
-The [notebook](https://www.kaggle.com/akashsdas/predict-students-grades) is available on Kaggle to work in the same environment where this notebook was created i.e. use the same version packages used, etc...
+The [notebook](https://www.kaggle.com/akashsdas/customer-segmentation) is available on Kaggle to work in the same environment where this notebook was created i.e. use the same version packages used, etc...
 
 ## Findings
 
